@@ -1,26 +1,20 @@
 {
-
   "manifest_version": 2,
   "name": "Dnevnik.ru average mark",
-  "version": "1.0",
-
+  "version": "1.0.0",
   "description": "Adds a new cell into marks table at schools.dnevnik.ru/marks.aspx - \"Average mark\"",
   "icons": {
-    "48": "icons/five.png"
+    "48": "icons/48.png"
   },
-
   "applications": {
     "gecko": {
-      "id": "dnevnik@mozilla.org",
-      "strict_min_version": "45.0"
+      "id": "{F9D5d5D7-b04a-B809-beF1-c4E9BF53B949}"
     }
   },
-
   "content_scripts": [
     {
       "matches": ["*://schools.dnevnik.ru/marks.aspx*"],
       "js": ["app.js"]
     }
   ]
-
 }
