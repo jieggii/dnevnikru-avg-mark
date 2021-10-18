@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Dnevnik.ru average mark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds a new cell into marks table at schools.dnevnik.ru/marks.aspx - \"Average mark\"",
   "icons": {
     "48": "icons/48.png"
