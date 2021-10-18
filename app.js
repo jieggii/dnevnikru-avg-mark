@@ -1,7 +1,9 @@
-function parseMarks(string) {
-    string = string.replace(/\D/g, "");
-    let stringMarks = string.split("");
-    return stringMarks.map((item) => parseInt(item))
+function cleanRawMarks(string) {
+    return string.replace(/\D/g, "");
+}
+
+function getMarks(string) {
+    return string.split("").map((item) => parseInt(item))
 }
 
 function countAverage(array) {
@@ -32,8 +34,9 @@ table.rows[0].insertCell().outerHTML = "<th rowspan=2>Среднее арифм�
 
 for (let row of [...table.rows].slice(2)) {
     let rawMarks = row.cells[2].textContent;
-    if (rawMarks !== "") {
-        let marks = parseMarks(rawMarks);
+    let marksFlow = cleanRawMarks(rawMarks);
+    if (marksFlow !== "") {
+        let marks = getMarks(marksFlow);
         let average = countAverage(marks);
         insertMarkCell(row, Math.round(average * 100) / 100);
     } else {
